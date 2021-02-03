@@ -26,7 +26,7 @@ public class Field {
     public void setFigure(Point point, Figure figure) throws InvalidPointException{
         if(!checkPoint(point)) throw new InvalidPointException();
 
-        field[point.getY()][point.getX()] = figure;
+        field[point.getX()][point.getY()] = figure;
     }
 
     private boolean checkPoint(final Point point){

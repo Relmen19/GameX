@@ -33,7 +33,7 @@ public class ConsoleView {
         }
     }
 
-    public boolean move(Game game, int gameMode){
+    public boolean move(Game game, int gameMode) throws InvalidPointException, AlreadyOccupiedException {
         final Field field = game.getField();
 
         final Figure currentFigure = currentMoveController.currentMoveFirstX(field);
@@ -49,8 +49,16 @@ public class ConsoleView {
             return false;
         }
 
-
         Point point = null;
+
+//        System.out.format("Please enter coordinate for figure: %s\n", currentFigure);
+//
+//        point = askPoint();
+//        try {
+//            moveController.applyFigure(field, point, currentFigure);
+//        } catch (InvalidPointException | AlreadyOccupiedException e) {
+//            System.out.println("Invalid coordinate, pls enter correct coordinate\n");
+//        }
 
         switch (currentFigure) {
             case X:
