@@ -9,17 +9,20 @@ import java.util.Scanner;
 public class CLI {
 
     public static void main(String[] args) throws AlreadyOccupiedException, InvalidPointException {
-        final int mode = askMode();
+//        final int mode = askMode();
 
-        final Player player = new Player("Andrew", Figure.X);
-        final Field field = new Field(3);
-        final Game game = new Game(player, field);
+        FormForGame formForGame = new FormForGame();
+        formForGame.setVisible(true);
 
-        ConsoleView consoleView = new ConsoleView();
-        consoleView.show(game);
-        while(consoleView.move(game, mode)){
-            consoleView.show(game);
-        }
+//        final Player player = new Player("Andrew", Figure.X);
+//        final Field field = new Field(3);
+//        final Game game = new Game(player, field);
+//
+//        ConsoleView consoleView = new ConsoleView();
+//        consoleView.show(game);
+//        while(consoleView.move(game, mode)){
+//            consoleView.show(game);
+//        }
 
     }
 
